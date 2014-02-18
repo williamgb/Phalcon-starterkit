@@ -29,8 +29,8 @@ if (ENVIRONMENT === 'development')
 */
 
 // Guess base path
-$basePath = str_replace('\public', '', __DIR__) . '\\';
-$basePath = str_replace('\\', '/', $basePath);
+$dir = str_replace('\\', '/', __DIR__);
+$basePath = str_replace('public', '', $dir);
 
 // Define  constants
 define('BASEPATH', $basePath);
