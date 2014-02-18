@@ -5,8 +5,8 @@
 | Config
 |--------------------------------------------------------------------------
 |
-| When bootstrap is running, it create a config var.
-| so we use $config to keep datas, you can make what you want with this.
+| When bootstrap is running, it creates a configuration variable.
+| So we're using $config to keep datas, you can make whatever you want with this.
 | 
 */
 $di->set('config', function() use ($config) {
@@ -20,7 +20,7 @@ $di->set('config', function() use ($config) {
 | Url
 |--------------------------------------------------------------------------
 |
-| Bootstrap.php guess for you the baseUrl if you no filled baseUri into
+| Bootstrap.php guess the baseUrl if you haven't filled the baseUri within
 | app/config/app.php.
 | 
 */
@@ -38,7 +38,7 @@ $di->set('url', function() use ($baseUrl) {
 | Database
 |--------------------------------------------------------------------------
 |
-| Set database as service, we use config/database.php for this.
+| Set our database as service, we use config/database.php for this.
 | 
 */
 $di->set('database', function() use ($config) {
@@ -61,7 +61,7 @@ $di->set('database', function() use ($config) {
 | Volt Service
 |--------------------------------------------------------------------------
 |
-| Volt service for view system just below
+| Volt service (smart template engine) will be enabled
 | 
 */
 $di->set('voltService', function($view, $di) use ($config) {
@@ -87,7 +87,7 @@ $di->set('voltService', function($view, $di) use ($config) {
 | View
 |--------------------------------------------------------------------------
 |
-| Init view service
+| We initialize the view service
 | 
 */
 $di->set('view', function() use ($config) {
@@ -113,7 +113,7 @@ $di->set('view', function() use ($config) {
 | Router 
 |--------------------------------------------------------------------------
 |
-| Init router of Phalcon, require routes from user and run
+| We initialize the Phalcon router, it requires the routes and runs it
 | 
 */
 $di->set('router', function() {
@@ -136,8 +136,8 @@ $di->set('router', function() {
 | Dispatcher
 |--------------------------------------------------------------------------
 |
-| Register dispatcher as service and attach event on him to create
-| 404 system if controller or action not found.
+| It registers the dispatcher as service and will attach event on him to create
+| 404 system if the controller/action is not found
 | 
 */
 $di->set('dispatcher', function() use ($di) {

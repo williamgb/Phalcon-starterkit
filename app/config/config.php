@@ -1,5 +1,32 @@
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| Config
+|--------------------------------------------------------------------------
+|
+| Here you can setup the phalcon configuration variables
+| Just add an array such as 
+| 
+| 'my_config' => [
+|
+|     'my_variable'     => 'my_value',
+|
+| ],
+|
+| After that you can access your variable via
+|
+| $config->my_config->my_variable
+| or $this->my_config->my_variable in an object context
+|
+| From anywhere
+|
+|--------------------------------------------------------------------------
+| For more details about the config system : 
+| @link http://docs.phalconphp.com/en/latest/api/Phalcon_Config.html
+|
+*/
+
 return new \Phalcon\Config([
 
     'database' => [

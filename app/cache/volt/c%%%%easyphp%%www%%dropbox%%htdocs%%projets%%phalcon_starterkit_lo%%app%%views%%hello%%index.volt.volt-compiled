@@ -9,7 +9,7 @@
 			<div class="spacer30"></div>
 
 			<div class="text-right">
-				{{ image('public/assets/img/logo.png', 'class': 'logo') }}
+				<?php echo $this->tag->image(array('public/assets/img/logo.png', 'class' => 'logo')); ?>
 				<hr>
 			</div>
 	

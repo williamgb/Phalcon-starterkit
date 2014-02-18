@@ -8,15 +8,18 @@
 |
 | Examples :
 |
-| Add single route : 
+| Add a single route : 
+|
 | $router->add('/hello', 'index::hello');
+|
 | 	-> Will execute indexController and helloAction method
 | 
 | Name the route :
+|
 | $router->add('/hello', 'index::hello')->setName('hello-world');
 | 
-| 
-| For more details about routing system : 
+|--------------------------------------------------------------------------
+| For more details about the routing system : 
 | @link http://docs.phalconphp.com/en/latest/reference/routing.html
 | 
 */

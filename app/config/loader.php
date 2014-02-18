@@ -4,8 +4,8 @@
 | Loader
 |--------------------------------------------------------------------------
 |
-| Register directories on which "not found" classes could be found
-| 
+| Register directories we will fetch to find any class you try to call
+|
 */
 $loader->registerDirs(array(
 
