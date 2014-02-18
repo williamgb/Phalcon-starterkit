@@ -8,6 +8,7 @@ The Phalcon StarterKit was developed to let people start their project with a re
 Structure
 =========
 
+```
 app
   | cache (dossier comportant les fichiers de cache)
     | volt (dossier où sont stockés les fichiers compilés de volt)
@@ -45,7 +46,8 @@ app
       
     | uploads (Dossier comportant les différents uploads)
   
-  
+```
+
 Features
 =========
 
