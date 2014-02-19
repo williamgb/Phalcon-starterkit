@@ -90,7 +90,101 @@ class DrugController extends ControllerBase
 
   ```
   
-  > Phalcon ira chercher dans les différents paths donnés si la classe existe.
+  > Phalcon ira chercher dans les différents paths donnés si la classe Drug avec le nom de fichier Drug.php existe.
+  
+__app/config/routes.php__
+
+  > Ce fichier vous permet d'ajouter de nouvelles routes pour votre application.
+  
+  > Exemple : 
+  
+  ```php
+  
+  <?php
+  
+  // Add new route
+  $router->add('/i/love/drugs', 'drugs::new');
+  
+  ```
+  
+  > L'exemple ci-dessus permet de dire à Phalcon que lorsqu'un utilisateur navigue sur http://www.exemple.com/i/love/drugs, il doit exécuter le controlleur Drugs et l'action new.
+  
+## app/controllers
+
+__app/controllers/ControllerBase.php
+
+  > Le controlleur maître, tout les autres controlleurs sont généralement étendus de celui ci. Il vous permet d'ajouter des méthodes ou autres traitements qui seront accessibles dans les autres controlleurs.
+  
+  > Exemple : 
+  
+  ```php
+  
+<?php
+
+// File : app/controllers/ControllerBase.php
+
+class ControllerBase extends Controller
+{
+	// Init protected var
+	protected $_favoriteDrug = '';
+
+	public function initialize()
+	{
+		// We will fill favorite drug
+		$this->_favoriteDrug = 'Acid';
+	}
+
+}
+
+
+
+  ```
+  
+  
+  ```php
+<?php
+
+class DrugsController extends ControllerBase
+{
+
+    public function favoriteAction()
+    {
+    	var_dump($this->_favoriteDrug);
+    	die();
+    }
+}
+
+
+  ```
+  
+  > L'exécution de la méthode favoriteAction de DrugsController affichera "Acid"
+
+__app/controllers/ErrorsController.php__
+
+  > De base ce controlleur ne possède qu'une seule méthode 404Action qui permet d'afficher une erreur404, ce controlleur est intimement lié au service dispatcher dans le fichier app/config/di.php, en effet le dispatcher exécute ce controlleur et l'action 404 quand il n'arrive pas a exécuter un controlleur et/ou une action demandée.
+  
+  
+__app/controllers/HelloController.php__
+
+  > Le controlleur qui est exécuté par défaut dans le système de routing (app/config/routes.php), il affiche tout simplement la landing page permettant de guider le nouveau développeur.
+  
+## App/libraries
+
+  > Lorsque vous créez une nouvelle librairie pour votre application (Ex. une classe qui s'occupe d'envoyer des emails), vous pouvez la stocker dans ce dossier, elle sera automatiquement reconnu par Phalcon grâce à la configuration de base du starterKit.
+  
+## App/models
+
+  > Ce dossier stocke tout les modèles de votre application, un modèle est une classe qui s'occupe d'intéragir avec votre base de données ou tout simplement d'une logique métier. Le starterKit est entièrement compatible avec le phalconTools, ainsi lors de la création automatique d'un modèle, celui-ci sera stocké directement ici.
+  
+## App/views
+
+  > Ce dossier comporte toutes les vues de votre application. L'arboresence est importante, en effet le starterKit utilise le système automatique de rendu de Phalcon.
+  
+  > Exemple : Si vous executez le controlleur Hello et son action Index, Phalcon en déduira qu'il faut charger la vue views/hello/index.volt
+  
+  > Remarque : L'exemple est vulgarisé, en effet Phalcon prends en compte aussi les différents layouts de votre application, pour plus d'informations n'hésitez par à vous rendre ici : http://docs.phalconphp.com/en/latest/reference/views.html#hierarchical-rendering
+  
+  
 
 Features
 =========
@@ -101,7 +195,7 @@ Features
 
 - Erreur 404
 - Friendly Phalcon tools
-- Base structure
+- Base structure for MVC application
 - Htaccess base
 - Système d'environnement (chargement automatique du module débug de phalcon quand on est en développement)
 - Principaux services lancés (config, url, database, view, router, dispatcher (execution des différentes actions), volt)
