@@ -184,6 +184,22 @@ __app/controllers/HelloController.php__
   
   > Remarque : L'exemple est vulgarisé, en effet Phalcon prends en compte aussi les différents layouts de votre application, pour plus d'informations n'hésitez par à vous rendre ici : http://docs.phalconphp.com/en/latest/reference/views.html#hierarchical-rendering
   
+__app/views/errors/show_404.volt__
+
+  > La vue qui affiche l'erreur 404
+  
+__app/views/hello/index.volt__
+
+  > La vue de la landing page
+  
+__app/views/layouts__
+
+  > Le dossier comportant tout les layouts
+  
+__app/views/index.volt__
+
+  > Le layout principal
+  
   
 
 Features
