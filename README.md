@@ -1,3 +1,6 @@
+Readme disponible en : [Fr](https://github.com/GesJeremie/Phalcon-starterkit/wiki/Fr)
+
+
 Phalcon-starterkit
 ==================
 
