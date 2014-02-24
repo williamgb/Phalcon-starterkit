@@ -10,6 +10,43 @@ Requirements
 
 - Only phalconPHP framework loaded <3
 
+
+Features
+=========
+
+- Landing page de départ
+  
+  Une page simple d'exemple permettant d'accompagner le développeur dans ses premiers pas avec le framework.
+
+- Erreur 404
+
+  Le starterKit embarque un système 404 pré-configuré via l'execution d'une action dans un controlleur
+  
+- Friendly Phalcon tools
+	
+  Le starterKit est compatible à 100% avec le phalconTools
+
+- Base structure for MVC application
+  
+  Le starterKit utilise le pattern MVC
+
+- Htaccess base
+  
+  Le starterKit comporte deux htaccess afin de rendre les urls plus propres
+
+- Système d'environnement (chargement automatique du module débug de phalcon quand on est en développement)
+
+  Le starterKit propose un petit système d'environnement (development/testing/production) via la constante ENVIRONMENT, lorsque vous êtes en développement, le starterKit charge automatiquement le module de debug de Phalcon
+  
+- Principaux services lancés 
+  Le starterKit embarque différents services essentielles pour faire tourner votre application MVC tels que : config, url, database, view, router, dispatcher, volt
+
+- Système magique de config, autoload de fichiers de config
+  Vous pouvez créez vos propres fichiers de config dans le dossier app/config, si vous ajoutez le nom du fichier dans app/config/config.php dans le array autoload/configs, le starterKit le chargera automatiquement
+	
+- Système de détection du base URI
+  Si vous n'avez pas remplis le baseUri dans app/config/config.php, le starterKit le devenira automatiquement
+
 Structure
 =========
 
@@ -45,8 +82,8 @@ app
   
 ```
 
-Structure Details
-=========
+# Structure Details
+
 
 ## App/cache
 
@@ -200,20 +237,30 @@ __app/views/index.volt__
 
   > Le layout principal
   
+## Public
+
+   > Le dossier comporte les différents fichiers publics
+   
+## Public/assets
+	
+   > Le dossier comporte les différents assets de votre application (js/img/libs/css/etc.)
+   
+## Public/uploads
+   
+   > Le dossier comporte les différents uploads que votre application pourrait générer
+   
+## Public/.htaccess
+
+   > Permet d'embelir vos URLs
+   
+## Public/bootstrap.php
+
+   > S'occupe de lancer le starterKit
+   
+## Public/index.php
+
+   > S'occupe de définir l'environnement de votre application et enclence bootstrap.php
+  
   
 
-Features
-=========
 
-- Landing page de départ
-  
-  Une page simple d'exemple permettant d'accompagner le développeur dans ses premiers pas avec le framework.
-
-- Erreur 404
-- Friendly Phalcon tools
-- Base structure for MVC application
-- Htaccess base
-- Système d'environnement (chargement automatique du module débug de phalcon quand on est en développement)
-- Principaux services lancés (config, url, database, view, router, dispatcher (execution des différentes actions), volt)
-- Système magique de config, autoload de fichiers de config
-- Système de détection du base URI
