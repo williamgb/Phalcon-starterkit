@@ -121,12 +121,15 @@ $di->set('router', function() {
     // Init router
     $router = new Phalcon\Mvc\Router();
 
+<<<<<<< HEAD
     // Use $_SERVER['REQUEST_URI'] (NGINX)
     if (!isset($_GET['_url'])) {
        $router->setUriSource(Phalcon\Mvc\Router::URI_SOURCE_SERVER_REQUEST_URI);
     }
     
 
+=======
+>>>>>>> dabd0c27b26db8fa739dfffd075628259bed39df
     // Fetch routes from user
     require(APPPATH . '/config/routes.php');
 
