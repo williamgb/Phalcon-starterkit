@@ -6,5 +6,5 @@ The Phalcon StarterKit was developed to let people start their project with a re
 
 # Do you want to use it ?
 
-* [Getting Started ! (English)](http://test.com)
+* [Getting Started ! (English)](https://github.com/GesJeremie/Phalcon-starterkit/wiki/Phalcon-StarterKit-(English))
 * [En avant ! (Français)](https://github.com/GesJeremie/Phalcon-starterkit/wiki/Phalcon-StarterKit-(Fran%C3%A7ais))
