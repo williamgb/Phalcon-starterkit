@@ -49,7 +49,7 @@
 					<code>app/views/index.volt</code>
 				</div>
 
-				The corresponding controller for this page is found at:
+				The corresponding controller for this page was found at:
 
 				<div class="well">
 					<code>app/controllers/HelloController.php</code>
@@ -61,7 +61,7 @@
 			<hr>
 
 			<div class="text-right">
-				Powered by StarterKit
+				Powered by <a href="https://github.com/GesJeremie/Phalcon-starterkit" target="_blank">StarterKit</a>
 			</div>
 
 		</div>

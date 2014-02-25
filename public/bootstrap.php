@@ -1,4 +1,4 @@
-<?php
+<?php if ( ! defined('ENVIRONMENT')) exit('No direct script access allowed');
 
 /*
 |--------------------------------------------------------------------------

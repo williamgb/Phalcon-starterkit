@@ -24,5 +24,3 @@
 | 
 */
 $router->add('/', 'hello::index');
-
-
