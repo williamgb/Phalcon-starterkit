@@ -61,7 +61,7 @@
 			<hr>
 
 			<div class="text-right">
-				Powered by StarterKit
+				Powered by <a href="https://github.com/GesJeremie/Phalcon-starterkit" target="_blank">StarterKit</a>
 			</div>
 
 		</div>
