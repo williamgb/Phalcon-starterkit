@@ -35,7 +35,8 @@ return new \Phalcon\Config([
         'host'        => 'localhost',
         'username'    => 'root',
         'password'    => '',
-        'dbname'      => ''
+        'dbname'      => '',
+        'charset'     => 'utf8'
     ],
 
     'application' => [
