@@ -38,10 +38,10 @@ $di->set('url', function() use ($baseUrl) {
 | Database
 |--------------------------------------------------------------------------
 |
-| Set our database as service, we use config/database.php for this.
+| Set our database as service, we use config/config.php for this.
 | 
 */
-$di->set('database', function() use ($config) {
+$di->set('db', function() use ($config) {
 
     // Dynamic namespace/class
     $dbClass = 'Phalcon\\Db\\Adapter\\Pdo\\' . $config->database->adapter;
