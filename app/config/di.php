@@ -21,7 +21,7 @@ $di->set('config', function() use ($config) {
 |--------------------------------------------------------------------------
 |
 | Bootstrap.php guess the baseUrl if you haven't filled the baseUri within
-| app/config/app.php.
+| app/config/config.php.
 | 
 */
 $di->set('url', function() use ($baseUrl) {
@@ -71,13 +71,17 @@ $di->set('voltService', function($view, $di) use ($config) {
 	$volt = new \Phalcon\Mvc\View\Engine\Volt($view, $di);
 
   // Set options to compiler
-  // All volt template are compiled into app/cache/volt
+  // All volt template are compiled within app/cache/volt
 	$volt->setOptions(array(
 
 		'compiledPath' => $config->application->cacheDir . 'volt/',
 		'compiledExtension' => '.volt-compiled'
 
 		));
+
+  // We require config/volt.php to add some things in our Volt service
+  require(APPPATH . '/config/volt.php');
+
 
 	return $volt;
 

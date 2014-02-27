@@ -32,7 +32,7 @@ class ErrorsController extends ControllerBase
 	 * This method is executed by the app/config/di.php file when we 
 	 * register the dispatcher service.
 	 * 
-	 * You can find the view of this method into app/views/show404.volt
+	 * You can find the view of this method into app/views/errors/show404.volt
 	 *
 	 * Note : We use the auto view system of PhalconPHP
 	 * @link https://phalcon-php-framework-documentation.readthedocs.org/en/latest/reference/views.html
