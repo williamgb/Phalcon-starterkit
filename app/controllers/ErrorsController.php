@@ -5,7 +5,7 @@
  * A simple starterKit for PhalconPHP. 
  *
  * @package		StarterKit
- * @author		Jeremie Ges
+ * @author		Jeremie Ges & Laurent Schaffner
  * @link		https://github.com/GesJeremie/PhalconPHP-StarterKit
  * @since		Version 0.1
  */

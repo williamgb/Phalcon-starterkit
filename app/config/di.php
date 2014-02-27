@@ -157,8 +157,6 @@ $di->set('dispatcher', function() use ($di) {
 
    $evManager = $di->getShared('eventsManager');
 
-
-
    $evManager->attach("dispatch:beforeException", function($event, $dispatcher, $exception) use ($di) {
 
 
